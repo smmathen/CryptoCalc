@@ -1,16 +1,20 @@
+
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+	<h1>{{ msg }}</h1>
   </div>
+  <fast-power/>
 </template>
 
 <script>
-export default {
-  name: 'AppName',
+import FastPower from "./FastPower.vue";
+export default{
+  components: { FastPower },
+  name: "AppName",
   props: {
-    msg: String
+	msg: String,
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

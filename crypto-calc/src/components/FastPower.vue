@@ -23,6 +23,7 @@
 	<div>{{solve(base, exp, mod)}}</div>
 	</div>
 </template>
+	
 
 <script>
 export default {
@@ -43,7 +44,8 @@ export default {
 	
 	methods:{
 		solve: function(base, exp, mod){
-			return base ** exp % mod;
+			
+			return base ** exp % mod || "Enter Values to Calculate Number!";
 		}
 	}
 

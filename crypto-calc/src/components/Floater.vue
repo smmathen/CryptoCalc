@@ -3,14 +3,18 @@
   <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
   <div class="mydivheader" @mousedown="dragMouseDown">{{title}}</div>
   <div class="mainbox">
-      <input class="eq-input" type="text" placeholder="Enter equation"/>
+      <FastPower/>
     </div> 
   
 </div>
 </template>
 
 <script>
+import FastPower from './FastPower.vue';
+
+
 export default {
+  components: {FastPower},
     props: {
         title: String
     },

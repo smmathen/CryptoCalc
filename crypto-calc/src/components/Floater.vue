@@ -1,13 +1,20 @@
 <template>
   <div class="mydiv">
   <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
-  <div class="mydivheader" @mousedown="dragMouseDown">Cryptography Solver</div>
-  <div class="mainbox"></div> 
+  <div class="mydivheader" @mousedown="dragMouseDown">{{title}}</div>
+  <div class="mainbox">
+      <input class="eq-input" type="text" placeholder="Enter equation"/>
+    </div> 
+  
 </div>
 </template>
 
 <script>
 export default {
+    props: {
+        title: String
+    },
+
     data: ()=>({
         pos1: 0,
         pos2: 0,
@@ -51,7 +58,7 @@ export default {
 </script>
 
 <style>
-    .mydiv {
+.mydiv {
   position: absolute;
   z-index: 9;
   background-color: #f1f1f1;
@@ -74,5 +81,11 @@ export default {
     border-radius: 10px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+}
+
+
+.eq-input{
+    margin-top: 40px;
+    width: 70%;
 }
 </style>
